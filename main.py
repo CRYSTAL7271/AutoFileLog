@@ -1,33 +1,24 @@
-import time
-import datetime
-import os
-import sys
-# dfn: display file name in logger
-def logger(text, logname, format, name):
-	try:
-			if format == 'txt':
-				if os.path.exists(logname + '.txt')==True:
-					f = open(logname + '.txt', 'a')
-					f.write(name + time.strftime('>> %H:%M:%S - ') + str(text) + '\n')
-					f.close()
-				else:
-					f = open(logname + '.txt', 'w')
-					f.write(name + time.strftime('>> %H:%M:%S - ') + str(text) + '\n')
-					f.close()
-			elif format == 'log':
-				if os.path.exists(logname + '.log')==True:
-					f = open(logname + '.log', 'a')
-					f.write(name + time.strftime('>> %H:%M:%S - ') + str(text) + '\n')
-					f.close()
-				else:
-					f = open(logname + '.log', 'w')
-					f.write(name + time.strftime('>> %H:%M:%S - ') + str(text) + '\n')
-					f.close()
-			else:
-				print('Error1 in logger: file format has to be log or txt.')
-				sys.exit(1)
-	except Exception as e:
-		print('Error0 in logger: Unknown Error>> ' + str(e))
-		sys.exit(0)
-				
-					
+from setuptools import setup, find_packages
+ 
+classifiers = [
+  'Development Status :: 5 - Production/Stable',
+  'Intended Audience :: Education',
+  'Operating System :: Microsoft :: Windows :: Windows 10',
+  'License :: OSI Approved :: MIT License',
+  'Programming Language :: Python :: 3'
+]
+ 
+setup(
+  name='joshbasiccalculator',
+  version='0.0.1',
+  description='A very basic calculator',
+  long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+  url='',  
+  author='CrystalStudioz',
+  author_email='sebastian.lentini210@gmail.com',
+  license='MIT', 
+  classifiers=classifiers,
+  keywords='calculator', 
+  packages=find_packages(),
+  install_requires=[''] 
+)	
