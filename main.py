@@ -3,18 +3,18 @@ from setuptools import setup, find_packages
 classifiers = [
   'Development Status :: 5 - Production/Stable',
   'Intended Audience :: Education',
-  'Operating System :: Microsoft :: Windows :: Windows 10',
+  'Operating System :: Samsung:: Tablet :: GalaxyTabS6Lite',
   'License :: OSI Approved :: MIT License',
   'Programming Language :: Python :: 3'
 ]
  
 setup(
-  name='joshbasiccalculator',
+  name='CrystalStudios',
   version='0.0.1',
-  description='A very basic calculator',
-  long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
+  description='Creates a file log for you, easy and fast.',
+  long_description=open('README.md').read(),
   url='',  
-  author='CrystalStudioz',
+  author='CrystalStudios',
   author_email='sebastian.lentini210@gmail.com',
   license='MIT', 
   classifiers=classifiers,
